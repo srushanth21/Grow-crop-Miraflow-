@@ -1,0 +1,59 @@
+version: "your.version.here"
+
+metadata:
+  name: "grow-crop"
+  description: "A flow will help you which crop to grow"
+  author: "srushanth21"
+  tags: [crops]
+  private: false
+
+inputs:
+  Type of Soil:
+    type: string
+    description: "Type of soil"
+    required: true
+    example: "sand, clay, silt, chalk soil, peat soil,black soil"
+  climate condition:
+    type: string
+    description: "Type of climate"
+    required: true
+    example: "tropical, dry, temperate, continental, and polar"
+   country:
+    type: string
+    description: "Country Name"
+    required: true
+    example: "India, Germany, Russia, Japan"  
+
+model:
+  provider: "openai"
+  name: "gpt-4o"
+
+prompt: |
+  Suggest me which type of crop to grow based on {Type of Soil},{climate condition},{country}
+
+readme: |
+  Here's a simple markdown README file based on your input:
+
+# Crop Selection Advisor
+
+A flow to help farmers determine the best crop to grow based on local conditions and requirements.
+
+## Features
+
+- Considers climate, country, and soil type
+- Takes into account the main purpose of cultivation
+- Provides recommendations based on key crop features
+- Easy-to-use interface for inputting data
+- Offers tailored suggestions for optimal crop selection
+
+## How to Use
+
+1. Input your local climate conditions (e.g., temperature range, rainfall, humidity)
+2. Select your country from the provided list
+3. Choose the type of soil present in your cultivation area
+4. Specify the main purpose for growing the crop (e.g., food, fiber, oil production)
+5. Enter any specific requirements or preferences you may have
+6. Review the suggested crops and their key features
+7. Select the most suitable crop based on the provided recommendations
+
+This flow simplifies the crop selection process by analyzing various factors to suggest the most appropriate crops for your specific situation.
